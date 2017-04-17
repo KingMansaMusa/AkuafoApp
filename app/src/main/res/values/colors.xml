@@ -6,6 +6,7 @@
 
 
     <color name="back_color">#ffffff</color>
+    <color name="below_back_color">#f7f4f4</color>
     <color name="primary">#8BC34A</color>
     <color name="primary_dark">#689F38</color>
     <color name="primary_light">#DCEDC8</color>

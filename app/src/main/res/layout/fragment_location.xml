@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/below_back_color">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/cat_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_header1"
+                android:textColor="@color/back_color"
+                android:textSize="@dimen/location_header_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_header2"
+                android:textColor="@color/back_color"
+                android:textSize="@dimen/location_header_text_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:layout_margin="@dimen/cat_margin"
+            android:gravity="center"
+            android:text="@string/location_accra"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_ashanti"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:layout_margin="@dimen/cat_margin"
+            android:text="@string/location_central"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:layout_margin="@dimen/cat_margin"
+            android:text="@string/location_eastern"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_western"
+            android:layout_margin="@dimen/cat_margin"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_volta"
+            android:layout_margin="@dimen/cat_margin"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_brong_ahafo"
+            android:textColor="@color/primary_text"
+            android:layout_margin="@dimen/cat_margin"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_northern"
+            android:textColor="@color/primary_text"
+            android:layout_margin="@dimen/cat_margin"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_upper_east"
+            android:textColor="@color/primary_text"
+            android:layout_margin="@dimen/cat_margin"
+            android:textSize="@dimen/cat_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:gravity="center"
+            android:text="@string/location_upper_west"
+            android:textColor="@color/primary_text"
+            android:layout_margin="@dimen/cat_margin"
+            android:textSize="@dimen/cat_text_size" />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

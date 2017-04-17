@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/below_back_color"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/cat_image_margin"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height"
+            android:layout_margin="@dimen/cat_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/farm1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_garlic"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_fruits_and_vegetables"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_corn"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_grains_and_beans"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_tuber"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_roots_and_tubers"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_meat"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_livestock"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_milk"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_dairy"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_oil"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_oils_and_butter"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
+                android:src="@drawable/ic_spice"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_spices_and_herbs"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

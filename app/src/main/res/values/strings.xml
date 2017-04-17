@@ -1,5 +1,42 @@
 <resources>
     <string name="app_name">Akuafo</string>
 
+    <string name="nav_menu_ads">Ads and Information</string>
+    <string name="nav_menu_cat">Categories</string>
+    <string name="nav_menu_location">Location</string>
+    <string name="nav_menu_user">User</string>
+    <string name="nav_menu_login">Login</string>
+    <string name="nav_menu_signup">Sign Up</string>
+    <string name="nav_menu_profile">Profile</string>
+    <string name="nav_menu_app">App</string>
+    <string name="nav_menu_about">About Akuafo</string>
+
+    <string name="close">close</string>
+    <string name="open">open</string>
+
+    <string name="cat_fruits_and_vegetables">Fruits and Vegetables</string>
+    <string name="cat_grains_and_beans">Grains and Beans</string>
+    <string name="cat_roots_and_tubers">Roots and Tubers</string>
+    <string name="cat_livestock">Livestock</string>
+    <string name="cat_dairy">Dairy</string>
+    <string name="cat_spices_and_herbs">Spices and Herbs</string>
+    <string name="cat_oils_and_butter">Oils and Butter</string>
+
+
+    <string name="location_accra">Greater Accra Region</string>
+    <string name="location_ashanti">Ashanti Region</string>
+    <string name="location_eastern">Eastern Region</string>
+    <string name="location_western">Western Region</string>
+    <string name="location_volta">Volta Region</string>
+    <string name="location_central">Central Region</string>
+    <string name="location_brong_ahafo">Brong Ahafo Region</string>
+    <string name="location_northern">Northern Region</string>
+    <string name="location_upper_east">Upper East Region</string>
+    <string name="location_upper_west">Upper West Region</string>
+
+    <string name="location_header1">Want to see ads from a specific location?</string>
+    <string name="location_header2">Select the Region you want</string>
+
+
 
 </resources>
