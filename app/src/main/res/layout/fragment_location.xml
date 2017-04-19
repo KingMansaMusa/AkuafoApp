@@ -40,6 +40,16 @@
             android:background="@color/back_color"
             android:layout_margin="@dimen/cat_margin"
             android:gravity="center"
+            android:text="@string/location_all"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/cat_text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:background="@color/back_color"
+            android:layout_margin="@dimen/cat_margin"
+            android:gravity="center"
             android:text="@string/location_accra"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/cat_text_size" />

@@ -12,6 +12,16 @@
 
     <dimen name="location_header_text_size">18sp</dimen>
 
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="button_radius">15dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+
+
+    <dimen name="view_height">2dp</dimen>
+
+    <dimen name="text_view_margin">10dp</dimen>
+    <dimen name="edit_text_margin">5dp</dimen>
+
 
 
 </resources>

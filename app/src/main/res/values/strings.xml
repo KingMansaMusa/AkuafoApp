@@ -14,6 +14,7 @@
     <string name="close">close</string>
     <string name="open">open</string>
 
+    <string name="cat_all">All</string>
     <string name="cat_fruits_and_vegetables">Fruits and Vegetables</string>
     <string name="cat_grains_and_beans">Grains and Beans</string>
     <string name="cat_roots_and_tubers">Roots and Tubers</string>
@@ -33,9 +34,20 @@
     <string name="location_northern">Northern Region</string>
     <string name="location_upper_east">Upper East Region</string>
     <string name="location_upper_west">Upper West Region</string>
+    <string name="location_all">All</string>
 
     <string name="location_header1">Want to see ads from a specific location?</string>
     <string name="location_header2">Select the Region you want</string>
+
+    <string name="sign_up_name">Name</string>
+    <string name="sign_up_email">Email</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_password_again">Password Again</string>
+    <string name="sign_up_button">SIgn Up</string>
+    <string name="sign_up__account_already">Already have an account?</string>
+    <string name="sign_up__login">Log In</string>
+    <string name="login_forgot_password">Forgot uour password?</string>
+    <string name="login_no_account">Don\'t have account?</string>
 
 
 

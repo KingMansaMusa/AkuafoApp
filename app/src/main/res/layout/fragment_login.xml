@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   android:layout_centerInParent="true"
+    android:padding="10dp"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/secondary_text"
+            android:layout_margin="@dimen/edit_text_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_email">
+
+        </TextView>
+
+
+        <EditText
+            android:ellipsize="end"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edit_text_email"
+            android:maxLines="1"
+            android:layout_margin="@dimen/edit_text_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sign_up_email">
+
+        </EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_margin="@dimen/edit_text_margin"
+            android:text="@string/sign_up_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/edit_text_password"
+            android:maxLines="1"
+            android:layout_margin="@dimen/edit_text_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="********">
+
+        </EditText>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/text_view_margin"
+            android:textColor="@color/back_color"
+            android:layout_gravity="center"
+            android:background="@drawable/button_custom"
+            android:text="@string/sign_up__login"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_view_forgot_password"
+            android:textColor="@color/primary_text"
+            android:layout_margin="@dimen/text_view_margin"
+            android:layout_gravity="center"
+            android:text="@string/login_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="@color/divider" />
+
+
+        <TextView
+            android:layout_margin="@dimen/text_view_margin"
+            android:layout_gravity="center"
+            android:text="@string/login_no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_view_signup"
+            android:textColor="@color/accent"
+            android:layout_gravity="center"
+            android:text="@string/sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

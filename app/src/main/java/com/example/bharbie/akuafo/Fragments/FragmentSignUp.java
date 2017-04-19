@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.bharbie.akuafo.R;
 
@@ -16,6 +19,7 @@ import com.example.bharbie.akuafo.R;
 public class FragmentSignUp extends Fragment {
 
     public FragmentSignUp(){}
+
 
     @Nullable
     @Override

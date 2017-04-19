@@ -23,12 +23,35 @@
             android:layout_margin="@dimen/cat_margin">
 
             <ImageView
+                android:src="@drawable/ic_cat_all"
+                android:layout_width="@dimen/cat_image_width"
+                android:layout_height="match_parent"
+                android:background="@color/accent"></ImageView>
+
+            <TextView
+                android:textColor="@color/primary_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_color"
+                android:gravity="center"
+                android:text="@string/cat_all"
+                android:textSize="@dimen/cat_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cat_height"
+            android:layout_margin="@dimen/cat_margin">
+
+            <ImageView
                 android:src="@drawable/ic_garlic"
                 android:layout_width="@dimen/cat_image_width"
                 android:layout_height="match_parent"
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -50,6 +73,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -71,6 +95,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -92,6 +117,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -113,6 +139,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -134,6 +161,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
@@ -155,6 +183,7 @@
                 android:background="@color/accent"></ImageView>
 
             <TextView
+                android:textColor="@color/primary_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/back_color"
