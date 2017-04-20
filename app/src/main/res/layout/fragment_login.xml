@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-   android:layout_centerInParent="true"
-    android:padding="10dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:padding="10dp">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -11,24 +11,24 @@
         android:orientation="vertical">
 
         <TextView
-            android:textColor="@color/secondary_text"
-            android:layout_margin="@dimen/edit_text_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up_email">
+            android:layout_margin="@dimen/edit_text_margin"
+            android:text="@string/sign_up_email"
+            android:textColor="@color/secondary_text">
 
         </TextView>
 
 
         <EditText
-            android:ellipsize="end"
-            android:inputType="textEmailAddress"
-            android:id="@+id/edit_text_email"
-            android:maxLines="1"
-            android:layout_margin="@dimen/edit_text_margin"
+            android:id="@+id/edit_text_login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/sign_up_email">
+            android:layout_margin="@dimen/edit_text_margin"
+            android:ellipsize="end"
+            android:hint="@string/sign_up_email"
+            android:inputType="textWebEmailAddress"
+            android:maxLines="1">
 
         </EditText>
 
@@ -38,24 +38,48 @@
             android:background="@color/divider" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/edit_text_margin"
             android:text="@string/sign_up_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:textColor="@color/secondary_text">
 
         </TextView>
 
         <EditText
-            android:inputType="textPassword"
-            android:id="@+id/edit_text_password"
-            android:maxLines="1"
-            android:layout_margin="@dimen/edit_text_margin"
+            android:id="@+id/edit_text_login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="********">
+            android:layout_margin="@dimen/edit_text_margin"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:maxLines="1">
 
         </EditText>
 
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/edit_text_margin"
+            android:text="@string/user_type"
+            android:textColor="@color/secondary_text">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinner_login_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/edit_text_margin"
+            android:spinnerMode="dropdown">
+
+        </Spinner>
 
         <View
             android:layout_width="match_parent"
@@ -64,23 +88,23 @@
 
         <Button
             android:id="@+id/button_login"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/text_view_margin"
-            android:textColor="@color/back_color"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/text_view_margin"
             android:background="@drawable/button_custom"
             android:text="@string/sign_up__login"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="wrap_content" />
+            android:textColor="@color/back_color"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text_view_forgot_password"
-            android:textColor="@color/primary_text"
-            android:layout_margin="@dimen/text_view_margin"
-            android:layout_gravity="center"
-            android:text="@string/login_forgot_password"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_view_margin"
+            android:text="@string/login_forgot_password"
+            android:textColor="@color/primary_text" />
 
         <View
             android:layout_width="match_parent"
@@ -89,19 +113,20 @@
 
 
         <TextView
-            android:layout_margin="@dimen/text_view_margin"
-            android:layout_gravity="center"
-            android:text="@string/login_no_account"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_view_margin"
+            android:text="@string/login_no_account"
+            android:textColor="@color/secondary_text" />
 
         <TextView
             android:id="@+id/text_view_signup"
-            android:textColor="@color/accent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/sign_up_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textColor="@color/accent" />
 
 
     </LinearLayout>

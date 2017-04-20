@@ -11,7 +11,7 @@
             android:title="@string/nav_menu_cat" />
         <item
             android:id="@+id/nav_location"
-            android:icon="@drawable/ic_categories"
+            android:icon="@drawable/ic_location"
             android:title="@string/nav_menu_location" />
         <item
             android:id="@+id/nav_user"

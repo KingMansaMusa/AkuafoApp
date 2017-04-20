@@ -40,6 +40,7 @@
     <string name="location_header2">Select the Region you want</string>
 
     <string name="sign_up_name">Name</string>
+    <string name="pass">********</string>
     <string name="sign_up_email">Email</string>
     <string name="sign_up_password">Password</string>
     <string name="sign_up_password_again">Password Again</string>
@@ -48,7 +49,12 @@
     <string name="sign_up__login">Log In</string>
     <string name="login_forgot_password">Forgot uour password?</string>
     <string name="login_no_account">Don\'t have account?</string>
+    <string name="user_type">Type</string>
 
+    <string-array name="spinner_options">
+        <item>Farmer</item>
+        <item>Truck Driver</item>
+    </string-array>
 
 
 </resources>
