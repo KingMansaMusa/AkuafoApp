@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "419566591979",
+    "firebase_url": "https://akuafo-db841.firebaseio.com",
+    "project_id": "akuafo-db841",
+    "storage_bucket": "akuafo-db841.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419566591979:android:eea0ac8ffbc7b7aa",
+        "android_client_info": {
+          "package_name": "com.example.bharbie.akuafo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419566591979-unietpmvonrrcc4fvb78uirvpob99uce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bharbie.akuafo",
+            "certificate_hash": "2d4dbc646aec161a96171483092f5a76ac54c29f"
+          }
+        },
+        {
+          "client_id": "419566591979-as3mpo93ndntv7j25e386atqi85ah733.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_lJpOsXRhV7HViPTMBq2-9-esUjXt090"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419566591979-as3mpo93ndntv7j25e386atqi85ah733.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

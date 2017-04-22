@@ -5,16 +5,25 @@
     android:layout_width="match_parent"
     android:id="@+id/nav_drawer"
     android:layout_height="match_parent"
-    tools:context="com.example.bharbie.akuafo.HomeActivity">
+    tools:context="com.example.bharbie.akuafo.Activities.HomeActivity">
 
-    <FrameLayout
-        android:id="@+id/place_holder"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <include layout="@layout/toolbar"
             android:id="@+id/main_toolbar"/>
-    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

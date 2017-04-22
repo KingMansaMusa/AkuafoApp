@@ -42,6 +42,7 @@
     <string name="sign_up_name">Name</string>
     <string name="pass">********</string>
     <string name="sign_up_email">Email</string>
+    <string name="email_hint">mail@example.com</string>
     <string name="sign_up_password">Password</string>
     <string name="sign_up_password_again">Password Again</string>
     <string name="sign_up_button">SIgn Up</string>
@@ -49,12 +50,75 @@
     <string name="sign_up__login">Log In</string>
     <string name="login_forgot_password">Forgot uour password?</string>
     <string name="login_no_account">Don\'t have account?</string>
+
     <string name="user_type">Type</string>
 
-    <string-array name="spinner_options">
+    <string-array name="spinner_sign_up">
         <item>Farmer</item>
         <item>Truck Driver</item>
     </string-array>
 
+    <string-array name="spinner_login">
+        <item>Farmer</item>
+        <item>Truck Driver</item>
+        <item>Extension</item>
+    </string-array>
+
+    <string-array name="spinner_location">
+        <item>Greater Accra Region</item>
+        <item>Eastern Region</item>
+        <item>Central Region</item>
+        <item>Western Region</item>
+        <item>Volta Region</item>
+        <item>Ashanti Region</item>
+        <item>Brong Ahafo Region</item>
+        <item>Northern Region</item>
+        <item>Upper East Region</item>
+        <item>Upper West Region</item>
+    </string-array>
+
+    <string-array name="spinner_category">
+        <item>Fruits and Vegetables</item>
+        <item>Grains and Beans</item>
+        <item>Roots and Tubers</item>
+        <item>Livestock</item>
+        <item>Dairy</item>
+        <item>cat_spices_and_herbs</item>
+        <item>Oils and Butter</item>
+    </string-array>
+
+    <string-array name="spinner_verified_by">
+        <item>Farmer</item>
+        <item>Truck Driver</item>
+    </string-array>
+
+    <string name="post_ads_caption">Caption</string>
+    <string name="post_ads_category">Category</string>
+    <string name="post_ads_price">Price</string>
+    <string name="post_ads_description">Description</string>
+    <string name="post_ads_location">Location</string>
+    <string name="post_ads_quantity">Quantity</string>
+    <string name="post_ads_verified_by">Verified By</string>
+    <string name="post_ads_button_post">POST</string>
+    <string name="post_ads_button_next">NEXT</string>
+
+
+    <string name="post_trucks_model">Truck Model</string>
+    <string name="post_trucks_model_hint">Model</string>
+    <string name="post_trucks_size">Size</string>
+    <string name="post_trucks_reg_no">Registration Number</string>
+    <string name="post_trucks_reg_no_hint">GR 0000 16</string>
+    <string name="post_trucks_button">POST</string>
+
+    <string-array name="spinner_truck_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <string name="post_extension_heading">Heading</string>
+    <string name="post_extension_info">ExtensionInformation</string>
+    <string name="post_extension_info_hint">Information here</string>
+    <string name="post_extension_button">POST</string>
 
 </resources>

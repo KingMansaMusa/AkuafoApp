@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.bharbie.akuafo.AdsAndInfoActivity">
+    tools:context="com.example.bharbie.akuafo.Activities.AdsAndInfoActivity">
 
     <include
         android:id="@+id/tab_toolbar"

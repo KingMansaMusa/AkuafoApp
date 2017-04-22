@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bharbie.akuafo.Activities.PostAdsFirstActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/post_ads_toolbar1"/>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp" />
+
+            <TextView
+                android:layout_margin="@dimen/edit_text_margin"
+                android:textColor="@color/secondary_text"
+                android:text="@string/post_ads_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/post_ads_price"
+                android:id="@+id/post_ads_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_margin="@dimen/edit_text_margin"
+                android:textColor="@color/secondary_text"
+                android:text="@string/post_ads_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/post_ads_caption"
+                android:id="@+id/post_ads_caption"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:minLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_margin="@dimen/edit_text_margin"
+                android:textColor="@color/secondary_text"
+                android:text="@string/post_ads_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/post_ads_description"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:scrollbars="vertical"
+                android:lines="3"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:gravity="start"
+                android:minLines="3"
+                android:ellipsize="end"
+                android:hint="@string/post_ads_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@+id/button_post_ads_next"
+                android:textStyle="bold"
+                android:textColor="@color/back_color"
+                android:text="@string/post_ads_button_next"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/text_view_margin"
+                android:background="@drawable/button_custom"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

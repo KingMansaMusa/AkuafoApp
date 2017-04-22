@@ -1,173 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:padding="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:text="@string/sign_up_name"
-            android:textColor="@color/secondary_text">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/edit_text_signup_username"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:hint="@string/sign_up_name"
-            android:maxLines="1">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:text="@string/sign_up_name"
+                android:textColor="@color/secondary_text">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
+            </TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:text="@string/sign_up_email"
-            android:textColor="@color/secondary_text">
+            <EditText
+                android:id="@+id/edit_text_signup_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/sign_up_name"
+                android:maxLines="1">
 
-        </TextView>
+            </EditText>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
 
-        <EditText
-            android:inputType="textEmailAddress"
-            android:id="@+id/edit_text_signup_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:hint="@string/sign_up_email"
-            android:maxLines="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:text="@string/sign_up_email"
+                android:textColor="@color/secondary_text">
 
-        </EditText>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:text="@string/user_type"
-            android:textColor="@color/secondary_text">
-
-        </TextView>
-
-        <Spinner
-
-            android:id="@+id/spinner_signup_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:spinnerMode="dropdown">
-
-        </Spinner>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:text="@string/sign_up_password"
-            android:textColor="@color/secondary_text">
-
-        </TextView>
-
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/edit_text_signup_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:hint="@string/sign_up_password"
-            android:maxLines="1">
-
-        </EditText>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:text="@string/sign_up_password_again"
-            android:textColor="@color/secondary_text">
-
-        </TextView>
-
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/edit_text_signup_password_again"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/edit_text_margin"
-            android:hint="@string/sign_up_password_again"
-            android:maxLines="1">
-
-        </EditText>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
-
-        <Button
-            android:id="@+id/button_signup"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/text_view_margin"
-            android:background="@drawable/button_custom"
-            android:text="@string/sign_up_button"
-            android:textColor="@color/back_color"
-            android:textStyle="bold" />
+            </TextView>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/view_height"
-            android:background="@color/divider" />
+            <EditText
+                android:id="@+id/edit_text_signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/text_view_margin"
-            android:text="@string/sign_up__account_already"
-            android:textColor="@color/primary_text" />
+            </EditText>
 
-        <TextView
-            android:id="@+id/text_view_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/sign_up__login"
-            android:textColor="@color/accent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:text="@string/user_type"
+                android:textColor="@color/secondary_text">
+
+            </TextView>
+
+            <Spinner
+
+                android:id="@+id/spinner_signup_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:text="@string/sign_up_password"
+                android:textColor="@color/secondary_text">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_text_signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:maxLines="1">
+
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:text="@string/sign_up_password_again"
+                android:textColor="@color/secondary_text">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_text_signup_password_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:maxLines="1">
+
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@+id/button_signup"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/text_view_margin"
+                android:background="@drawable/button_custom"
+                android:text="@string/sign_up_button"
+                android:textColor="@color/back_color"
+                android:textStyle="bold" />
 
 
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/text_view_margin"
+                android:text="@string/sign_up__account_already"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/text_view_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/sign_up__login"
+                android:textColor="@color/accent" />
 
 
-</android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
