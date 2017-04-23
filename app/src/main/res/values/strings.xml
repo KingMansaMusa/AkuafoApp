@@ -95,6 +95,8 @@
     <string name="post_ads_caption">Caption</string>
     <string name="post_ads_category">Category</string>
     <string name="post_ads_price">Price</string>
+    <string name="post_ads_phone_number">Phone</string>
+    <string name="post_ads_phone_number_hint">0240000000</string>
     <string name="post_ads_description">Description</string>
     <string name="post_ads_location">Location</string>
     <string name="post_ads_quantity">Quantity</string>
@@ -120,5 +122,28 @@
     <string name="post_extension_info">ExtensionInformation</string>
     <string name="post_extension_info_hint">Information here</string>
     <string name="post_extension_button">POST</string>
+
+    <string name="list_view_ads_caption">Caption</string>
+    <string name="list_view_ads_price">GhS 500</string>
+    <string name="list_view_ads_sender">Farmer</string>
+    <string name="list_view_ads_date">22/01/2017</string>
+    <string name="list_view_ads_verified_by">Extension</string>
+
+
+    <string name="list_view_trucks_sender">Truck Driver</string>
+    <string name="list_view_trucks_size">Large</string>
+    <string name="list_view_trucks_model">Model</string>
+    <string name="list_view_trucks_date">22/01/2017</string>
+
+
+    <string name="sent_by">Sent By</string>
+    <string name="call">CALL</string>
+    <string name="date">Date</string>
+
+
+    <string name="list_view_extension_heading">Heading</string>
+    <string name="list_view_extension_sender">Extension Officer</string>
+    <string name="list_view_extension_info">Extension info is here</string>
+
 
 </resources>

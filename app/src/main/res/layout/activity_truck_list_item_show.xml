@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bharbie.akuafo.Activities.TruckListItemShowActivity">
+
+    <include
+        android:id="@+id/truck_list_item_toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/truck_list_item_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:text="@string/sent_by"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/list_view_trucks_sender"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:id="@+id/list_item_truck_sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:text="@string/post_trucks_model"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/post_trucks_model_hint"
+                android:textColor="@color/primary_text"
+                android:id="@+id/list_item_truck_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+            <TextView
+                android:text="@string/post_trucks_size"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/list_view_trucks_size"
+                android:textColor="@color/primary_text"
+                android:id="@+id/list_item_truck_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:text="@string/post_trucks_reg_no"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/post_trucks_reg_no_hint"
+                android:textColor="@color/primary_text"
+                android:id="@+id/list_item_truck_reg_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:text="@string/date"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/list_view_ads_date"
+                android:textColor="@color/primary_text"
+                android:id="@+id/list_item_truck_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+
+            <Button
+                android:id="@+id/button_call_truck_driver"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/text_view_margin"
+                android:background="@drawable/button_custom"
+                android:text="@string/call"
+                android:textColor="@color/back_color"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

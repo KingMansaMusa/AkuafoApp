@@ -20,7 +20,7 @@ public class AdsAndInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ads_and_info);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tab_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(ContextCompat.getColor(AdsAndInfoActivity.this, R.color.back_color));
         toolbar.setTitle("Ads and Info");

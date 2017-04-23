@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/list_view_padding">
+
+    <LinearLayout
+        android:padding="@dimen/list_view_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height">
+
+        <TextView
+            android:text="@string/list_view_trucks_sender"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:id="@+id/list_item_extension_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"  />
+
+        <TextView
+            android:padding="@dimen/list_view_item_padding"
+            android:textColor="@color/secondary_text"
+            android:text="@string/list_view_extension_sender"
+            android:id="@+id/list_view_extension_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+        <TextView
+            android:textColor="@color/secondary_text"
+            android:text="@string/list_view_extension_info"
+            android:id="@+id/list_view_extension_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:minLines="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

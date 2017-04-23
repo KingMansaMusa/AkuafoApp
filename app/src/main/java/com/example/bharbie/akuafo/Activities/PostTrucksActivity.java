@@ -1,8 +1,10 @@
 package com.example.bharbie.akuafo.Activities;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,6 +20,13 @@ public class PostTrucksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_trucks);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(ContextCompat.getColor(PostTrucksActivity.this, R.color.back_color));
+        toolbar.setTitle("Akuafo");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final EditText editTextModel = (EditText)findViewById(R.id.post_trucks_model);
         final EditText editTextRegNo = (EditText)findViewById(R.id.post_trucks_reg_no);
@@ -38,9 +47,9 @@ public class PostTrucksActivity extends AppCompatActivity {
                 String size = spinnerTruckSize.getSelectedItem().toString();
 
                 if (model.isEmpty()){
-                    Toast.makeText(PostTrucksActivity.this,"Please specify the model of your truck",Toast.LENGTH_LONG);
+                    Toast.makeText(PostTrucksActivity.this,"Please specify the model of your truck",Toast.LENGTH_LONG).show();
                 }else if (regNo.isEmpty()){
-                    Toast.makeText(PostTrucksActivity.this,"Please input yout vehicle registration number",Toast.LENGTH_LONG);
+                    Toast.makeText(PostTrucksActivity.this,"Please input yout vehicle registration number",Toast.LENGTH_LONG).show();
                 }else {
                     Intent intent = new Intent(PostTrucksActivity.this,HomeActivity.class);
                     intent.putExtra("Check",1);

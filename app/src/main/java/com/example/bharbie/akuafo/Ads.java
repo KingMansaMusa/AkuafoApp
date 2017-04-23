@@ -10,7 +10,7 @@ public class Ads extends RealmObject {
 
     public String id;
     public User user;
-    public String image;
+    public int image;
     public String caption;
     public String price;
     public String description;
@@ -18,11 +18,13 @@ public class Ads extends RealmObject {
     public String category;
     public String quantity;
     public String date;
+    public String phone;
     public String verifiedBy;
 
-    public Ads() {}
+    public Ads() {
+    }
 
-    public Ads(String id, User user, String image, String caption, String price,  String description, String location, String category, String quantity, String date, String verifiedBy) {
+    public Ads(String id, User user, int image, String caption, String price, String description, String location, String category, String quantity, String date, String verifiedBy, String phone) {
         this.id = id;
         this.image = image;
         this.caption = caption;
@@ -34,6 +36,15 @@ public class Ads extends RealmObject {
         this.date = date;
         this.verifiedBy = verifiedBy;
         this.user = user;
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getId() {
@@ -44,11 +55,11 @@ public class Ads extends RealmObject {
         this.id = id;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -114,5 +125,13 @@ public class Ads extends RealmObject {
 
     public void setVerifiedBy(String verifiedBy) {
         this.verifiedBy = verifiedBy;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

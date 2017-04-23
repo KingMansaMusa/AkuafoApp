@@ -20,7 +20,7 @@ public class PostAdsFirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post_ads_first);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.post_ads_toolbar1);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Ads and Info");
         toolbar.setTitleTextColor(ContextCompat.getColor(PostAdsFirstActivity.this, R.color.back_color));
@@ -39,11 +39,13 @@ public class PostAdsFirstActivity extends AppCompatActivity {
                 String description = editTextDescription.getText().toString();
 
                 if (price.isEmpty()){
-                    Toast.makeText(PostAdsFirstActivity.this,"Please input the price of your ad",Toast.LENGTH_LONG);
+                    Toast.makeText(PostAdsFirstActivity.this,"Please input the price of your ad",Toast.LENGTH_LONG).show();
                 }else if (caption.isEmpty()){
-                    Toast.makeText(PostAdsFirstActivity.this,"Please input the caption for your ad",Toast.LENGTH_LONG);
+                    Toast.makeText(PostAdsFirstActivity.this,"Please input the caption for your ad",Toast.LENGTH_LONG).show();
                 }else {
                     Intent intent = new Intent(PostAdsFirstActivity.this,PostAdsSecondActivity.class);
+                    intent.putExtra("price",price);
+
                     startActivity(intent);
                 }
 

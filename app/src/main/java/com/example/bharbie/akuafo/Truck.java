@@ -10,8 +10,9 @@ public class Truck extends RealmObject {
 
     public String id;
     public User user;
-    public String image;
+    public int image;
     public String model;
+    public String phone;
     public String size;
     public String regNo;
 
@@ -27,8 +28,17 @@ public class Truck extends RealmObject {
 
     public Truck() {}
 
-    public Truck(String id, User user,String image, String model, String size, String regNo, String date) {
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Truck(String id, User user, int image, String model, String size, String regNo, String date, String phone) {
         this.id = id;
+        this.phone = phone;
         this.image = image;
         this.model = model;
         this.size = size;
@@ -45,11 +55,11 @@ public class Truck extends RealmObject {
         this.id = id;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

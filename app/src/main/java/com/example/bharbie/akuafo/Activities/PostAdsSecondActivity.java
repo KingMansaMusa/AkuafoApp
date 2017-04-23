@@ -21,10 +21,13 @@ public class PostAdsSecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_ads_second);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.post_ads_toolbar2);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Ads and Info");
         toolbar.setTitleTextColor(ContextCompat.getColor(PostAdsSecondActivity.this, R.color.back_color));
+
+        Intent intent= getIntent();
+        intent.getStringExtra("price");
 
         final Spinner spinnerLocation = (Spinner)findViewById(R.id.spinner_location);
 // Create an ArrayAdapter using the string array and a default spinner layout
@@ -50,6 +53,7 @@ public class PostAdsSecondActivity extends AppCompatActivity {
 
 
         final EditText editTextQuantity = (EditText)findViewById(R.id.post_ads_quantity);
+        final EditText editTextPhone = (EditText)findViewById(R.id.post_ads_phone_number);
         Button buttonPost = (Button) findViewById(R.id.post_ads_button_post);
 
         buttonPost.setOnClickListener(new View.OnClickListener() {
@@ -59,9 +63,13 @@ public class PostAdsSecondActivity extends AppCompatActivity {
                String location = spinnerLocation.getSelectedItem().toString();
                 String verifiedBy = spinnerVerifiedBy.getSelectedItem().toString();
                 String quantity = editTextQuantity.getText().toString();
+                String phone = editTextPhone.getText().toString();
                 if (quantity.isEmpty()){
-                    Toast.makeText(PostAdsSecondActivity.this,"Please specify the quantity", Toast.LENGTH_LONG);
-                }else {
+                    Toast.makeText(PostAdsSecondActivity.this,"Please specify the quantity", Toast.LENGTH_LONG).show();
+                }else if (phone.isEmpty()){
+                    Toast.makeText(PostAdsSecondActivity.this,"Please input the phone number to buy",Toast.LENGTH_LONG).show();
+                }
+                else {
                     Intent intent = new Intent(PostAdsSecondActivity.this,HomeActivity.class);
                     intent.putExtra("Check",1);
                     startActivity(intent);

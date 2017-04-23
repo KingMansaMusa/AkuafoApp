@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/extension_list_item_toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/post_extension_heading"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:id="@+id/list_item_extension_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:maxLines="100"
+                android:minLines="20"
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/post_extension_info_hint"
+                android:textColor="@color/secondary_text"
+                android:id="@+id/list_item_extension_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_gravity="end"
+                android:text="@string/sent_by"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="end"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/post_extension_info_hint"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:id="@+id/list_view_extension_info_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_gravity="end"
+                android:text="@string/date"
+                android:textColor="@color/secondary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="end"
+                android:textStyle="bold"
+                android:padding="@dimen/list_view_item_padding"
+                android:text="@string/list_view_ads_date"
+                android:textColor="@color/primary_text"
+                android:id="@+id/list_item_extension_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:background="@color/divider" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

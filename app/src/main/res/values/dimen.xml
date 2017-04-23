@@ -18,9 +18,15 @@
 
 
     <dimen name="view_height">2dp</dimen>
+    <dimen name="list_view_item_padding">2dp</dimen>
 
     <dimen name="text_view_margin">10dp</dimen>
     <dimen name="edit_text_margin">5dp</dimen>
+
+    <dimen name="divider_height">2dp</dimen>
+    <dimen name="list_view_padding">10dp</dimen>
+    <dimen name="list_item_height">100dp</dimen>
+
 
 
 

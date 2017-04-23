@@ -22,7 +22,10 @@
         <activity android:name=".Activities.PostAdsFirstActivity" />
         <activity android:name=".Activities.PostAdsSecondActivity" />
         <activity android:name=".Activities.PostTrucksActivity" />
-        <activity android:name=".Activities.PostExtensionActivity"></activity>
+        <activity android:name=".Activities.PostExtensionActivity" />
+        <activity android:name=".Activities.AdsListItemShowActivity" />
+        <activity android:name=".Activities.TruckListItemShowActivity" />
+        <activity android:name=".Activities.ExtensionListItemShowActivity"></activity>
     </application>
 
 </manifest>
