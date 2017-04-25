@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setTitleTextColor(ContextCompat.getColor(HomeActivity.this,R.color.back_color));
+       // toolbar.setTitleTextColor(ContextCompat.getColor(HomeActivity.this,R.color.back_color));
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.nav_drawer);
@@ -76,7 +76,12 @@ public class HomeActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                 } else if (item.getItemId() == R.id.nav_profile) {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.place_holder, new FragmentProfile());
+
+                    Bundle bundle = new Bundle();
+                    bundle.putBoolean("isLocation",false);
+                    FragmentProfile fragmentProfile = new FragmentProfile();
+                    fragmentProfile.setArguments(bundle);
+                    fragmentTransaction.replace(R.id.place_holder, fragmentProfile);
                     fragmentTransaction.commit();
                 } else {
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

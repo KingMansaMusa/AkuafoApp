@@ -42,7 +42,7 @@ public class ExtensionListAdapter extends ArrayAdapter {
 
 
         textViewExtensionHeaderList.setText(extensionInfo.getHeading());
-        textViewExtensionOfficerList.setText(extensionInfo.getUser().getName());
+        textViewExtensionOfficerList.setText(extensionInfo.getUseFiler().getName());
         textViewExtensionInfoList.setText(extensionInfo.getInfo());
 
         return convertView;

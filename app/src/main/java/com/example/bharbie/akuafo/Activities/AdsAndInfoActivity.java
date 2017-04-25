@@ -22,17 +22,17 @@ public class AdsAndInfoActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(ContextCompat.getColor(AdsAndInfoActivity.this, R.color.back_color));
-        toolbar.setTitle("Ads and Info");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //toolbar.setTitleTextColor(ContextCompat.getColor(AdsAndInfoActivity.this, R.color.back_color));
+        //toolbar.setTitle("Ads and Info");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        toolbar.setOnClickListener(new View.OnClickListener() {
+        /**toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
-        });
+        });**/
 
 
 

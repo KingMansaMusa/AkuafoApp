@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,10 +56,10 @@ public class FragmentSignUp extends Fragment {
         View view = inflater.inflate(R.layout.fragment_signup, container, false);
 
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("UserTable");
         mAuth = FirebaseAuth.getInstance();
 
-
+        final ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
         final EditText editTextEmail = (EditText) view.findViewById(R.id.edit_text_signup_email);
         final EditText editTextName = (EditText) view.findViewById(R.id.edit_text_signup_username);
         final EditText editTextPassword = (EditText) view.findViewById(R.id.edit_text_signup_password);
@@ -79,7 +80,7 @@ public class FragmentSignUp extends Fragment {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String id =String.valueOf(Calendar.getInstance().getTimeInMillis()) ;
+                String id =String.valueOf(Calendar.getInstance().getTimeInMillis());
                 String type = spinnerSignUp.getSelectedItem().toString();
                 String username = editTextName.getText().toString();
                 String email = editTextEmail.getText().toString();
@@ -99,6 +100,7 @@ public class FragmentSignUp extends Fragment {
                    final User user = new User(id,username,email,password1,type);
                    final UserFire userFire = new UserFire(id,username,email,password1,type);
 
+                    progressBar.setVisibility(View.VISIBLE);
                     mAuth.createUserWithEmailAndPassword(email, password1)
                             .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -113,11 +115,14 @@ public class FragmentSignUp extends Fragment {
                                         user.id = id;
                                         userFire.id = id;
 
-                                        mDatabase.child("UserTable").setValue(userFire, new DatabaseReference.CompletionListener() {
+                                        DatabaseReference currentUser = mDatabase.child(id);
+                                        currentUser.child("UserTable").setValue(userFire, new DatabaseReference.CompletionListener() {
                                             @Override
                                             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                                 if (databaseError != null){
                                                    Log.e("ERROR",databaseError.toString());
+                                                    User user = new User(userFire.id,userFire.name,userFire.email,userFire.password,userFire.type);
+                                                    user.save(user);
                                                 }
                                             }
                                         });
@@ -131,6 +136,7 @@ public class FragmentSignUp extends Fragment {
                                         Log.e(TAG, "Failed:" + task.getException().toString());
                                         Toast.makeText(getActivity(), "Sign Up Failed",
                                                 Toast.LENGTH_SHORT).show();
+                                        progressBar.setVisibility(View.GONE);
                                     }
                                 }
                             });

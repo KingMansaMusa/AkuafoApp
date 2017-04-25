@@ -6,22 +6,22 @@ import io.realm.RealmObject;
  * Created by BHARBIE on 4/21/2017.
  */
 
-public class Truck extends RealmObject {
+public class Truck {
 
     public String id;
-    public User user;
-    public int image;
+    public UserFire userFire;
+    public String image;
     public String model;
     public String phone;
     public String size;
     public String regNo;
 
-    public User getUser() {
-        return user;
+    public UserFire getUserFire() {
+        return userFire;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserFire(UserFire userFire) {
+        this.userFire = userFire;
     }
 
     public String date;
@@ -36,7 +36,7 @@ public class Truck extends RealmObject {
         this.phone = phone;
     }
 
-    public Truck(String id, User user, int image, String model, String size, String regNo, String date, String phone) {
+    public Truck(String id, UserFire userFire, String image, String model, String size, String regNo, String date, String phone) {
         this.id = id;
         this.phone = phone;
         this.image = image;
@@ -44,7 +44,7 @@ public class Truck extends RealmObject {
         this.size = size;
         this.regNo = regNo;
         this.date = date;
-        this.user = user;
+        this.userFire = userFire;
     }
 
     public String getId() {
@@ -55,11 +55,11 @@ public class Truck extends RealmObject {
         this.id = id;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

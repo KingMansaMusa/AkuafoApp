@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.bharbie.akuafo.Ads;
 import com.example.bharbie.akuafo.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class AdsListAdapter extends ArrayAdapter<Ads> {
         TextView textViewAdsDateList = (TextView)convertView.findViewById(R.id.list_view_ads_date);
 
         textViewAdsCaptionList.setText(ads.getCaption());
-        imageViewAdsList.setImageResource(ads.getImage());
+        Picasso.with(context).load(ads.image).into(imageViewAdsList);
         textViewAdsPriceList.setText(ads.getPrice());
         textViewAdsSenderList.setText(ads.getUser().getName());
         textViewAdsDateList.setText(ads.getDate());

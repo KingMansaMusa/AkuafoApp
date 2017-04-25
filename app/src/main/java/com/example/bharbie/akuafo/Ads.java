@@ -6,11 +6,11 @@ import io.realm.RealmObject;
  * Created by BHARBIE on 4/21/2017.
  */
 
-public class Ads extends RealmObject {
+public class Ads {
 
     public String id;
-    public User user;
-    public int image;
+    public UserFire userFire;
+    public String image;
     public String caption;
     public String price;
     public String description;
@@ -24,7 +24,7 @@ public class Ads extends RealmObject {
     public Ads() {
     }
 
-    public Ads(String id, User user, int image, String caption, String price, String description, String location, String category, String quantity, String date, String verifiedBy, String phone) {
+    public Ads(String id, UserFire userFire, String image, String caption, String price, String description, String location, String category, String quantity, String date, String verifiedBy, String phone) {
         this.id = id;
         this.image = image;
         this.caption = caption;
@@ -35,7 +35,7 @@ public class Ads extends RealmObject {
         this.quantity = quantity;
         this.date = date;
         this.verifiedBy = verifiedBy;
-        this.user = user;
+        this.userFire = userFire;
         this.phone = phone;
     }
 
@@ -55,11 +55,11 @@ public class Ads extends RealmObject {
         this.id = id;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -127,11 +127,11 @@ public class Ads extends RealmObject {
         this.verifiedBy = verifiedBy;
     }
 
-    public User getUser() {
-        return user;
+    public UserFire getUser() {
+        return userFire;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserFire(UserFire userFire) {
+        this.userFire = userFire;
     }
 }

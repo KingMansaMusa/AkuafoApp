@@ -6,20 +6,20 @@ import io.realm.RealmObject;
  * Created by BHARBIE on 4/21/2017.
  */
 
-public class ExtensionInfo extends RealmObject {
+public class ExtensionInfo{
 
     public String id;
     public String heading;
-    public User user;
+    public UserFire userFire;
     public String info;
     public String date;
 
     public ExtensionInfo() {}
 
-    public ExtensionInfo(String id, String heading, User user, String info, String date) {
+    public ExtensionInfo(String id, String heading, UserFire userFire, String info, String date) {
         this.id = id;
         this.heading = heading;
-        this.user = user;
+        this.userFire = userFire;
         this.info = info;
         this.date = date;
     }
@@ -40,12 +40,12 @@ public class ExtensionInfo extends RealmObject {
         this.heading = heading;
     }
 
-    public User getUser() {
-        return user;
+    public UserFire getUseFiler() {
+        return userFire;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserFire(UserFire userFire) {
+        this.userFire = userFire;
     }
 
     public String getInfo() {

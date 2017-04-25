@@ -35,6 +35,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/all"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -45,6 +46,7 @@
             android:textSize="@dimen/cat_text_size" />
 
         <TextView
+            android:id="@+id/accra"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -56,6 +58,7 @@
 
 
         <TextView
+            android:id="@+id/ashanti"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:layout_margin="@dimen/cat_margin"
@@ -67,6 +70,7 @@
 
 
         <TextView
+            android:id="@+id/central"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -78,6 +82,7 @@
 
 
         <TextView
+            android:id="@+id/eastern"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -89,6 +94,7 @@
 
 
         <TextView
+            android:id="@+id/western"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -100,6 +106,7 @@
 
 
         <TextView
+            android:id="@+id/volta"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -111,6 +118,7 @@
 
 
         <TextView
+            android:id="@+id/brong"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -122,6 +130,7 @@
 
 
         <TextView
+            android:id="@+id/north"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -133,6 +142,7 @@
 
 
         <TextView
+            android:id="@+id/upper_east"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"
@@ -144,6 +154,7 @@
 
 
         <TextView
+            android:id="@+id/upper_west"
             android:layout_width="match_parent"
             android:layout_height="@dimen/cat_height"
             android:background="@color/back_color"

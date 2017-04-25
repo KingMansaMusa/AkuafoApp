@@ -74,5 +74,9 @@ public class User extends RealmObject {
         realm.commitTransaction();
     }
 
+    public User getUser(){
+        Realm realm = Realm.getDefaultInstance();
+        return  realm.where(User.class).findFirst();
+    }
 
 }

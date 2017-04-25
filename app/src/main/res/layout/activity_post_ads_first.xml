@@ -22,6 +22,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/image_view_post_ads"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="250dp"
                 android:layout_height="250dp" />

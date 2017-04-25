@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.bharbie.akuafo.Ads;
 import com.example.bharbie.akuafo.R;
 import com.example.bharbie.akuafo.Truck;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,9 +44,9 @@ public class TrucksListAdapter extends ArrayAdapter<Truck> {
         TextView textViewTrucksDateList = (TextView)convertView.findViewById(R.id.list_view_trucks_date);
 
         textViewModelList.setText(truck.getModel());
-        imageViewTrucksList.setImageResource(truck.getImage());
+        Picasso.with(context).load(truck.image).into(imageViewTrucksList);
         textViewSizeList.setText(truck.getSize());
-        textViewTruckDriveList.setText(truck.getUser().getName());
+        textViewTruckDriveList.setText(truck.getUserFire().getName());
         textViewTrucksDateList.setText(truck.getDate());
 
         return convertView;

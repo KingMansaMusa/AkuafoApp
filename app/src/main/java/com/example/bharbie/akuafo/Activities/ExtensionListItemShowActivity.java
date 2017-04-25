@@ -16,10 +16,10 @@ public class ExtensionListItemShowActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(ContextCompat.getColor(ExtensionListItemShowActivity.this, R.color.back_color));
-        toolbar.setTitle("Akuafo");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //toolbar.setTitleTextColor(ContextCompat.getColor(ExtensionListItemShowActivity.this, R.color.back_color));
+        //toolbar.setTitle("Akuafo");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 }
