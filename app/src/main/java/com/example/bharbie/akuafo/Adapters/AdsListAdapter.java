@@ -45,7 +45,7 @@ public class AdsListAdapter extends ArrayAdapter<Ads> {
         textViewAdsCaptionList.setText(ads.getCaption());
         Picasso.with(context).load(ads.image).into(imageViewAdsList);
         textViewAdsPriceList.setText(ads.getPrice());
-        textViewAdsSenderList.setText(ads.getUser().getName());
+        //textViewAdsSenderList.setText(ads.getUser().getName());
         textViewAdsDateList.setText(ads.getDate());
 
         return convertView;

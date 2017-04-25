@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,7 +58,7 @@ public class FragmentLogin extends Fragment {
 
 
         View view = inflater.inflate(R.layout.fragment_login, container, false);
-
+        final ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
         editTextEmail = (EditText) view.findViewById(R.id.edit_text_login_email);
         editTextPassword = (EditText) view.findViewById(R.id.edit_text_login_password);
         Button buttonLogin = (Button) view.findViewById(R.id.button_login);
@@ -90,6 +91,7 @@ public class FragmentLogin extends Fragment {
                     Toast.makeText(getActivity(), "Please enter your password", Toast.LENGTH_LONG).show();
 
                 } else {
+                    progressBar.setVisibility(View.VISIBLE);
                     mAuth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -117,6 +119,8 @@ public class FragmentLogin extends Fragment {
                                         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                                         fragmentTransaction.replace(R.id.place_holder, new FragmentProfile());
                                         fragmentTransaction.commit();
+
+                                        progressBar.setVisibility(View.GONE);
 
                                     } else {
                                         Toast.makeText(getActivity(), "Login Failed. Your credentials do not exist. Check your credentials or Sign Up",

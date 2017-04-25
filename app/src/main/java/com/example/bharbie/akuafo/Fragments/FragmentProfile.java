@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.bharbie.akuafo.Adapters.AdsListAdapter;
 import com.example.bharbie.akuafo.Ads;
@@ -36,12 +37,14 @@ public class FragmentProfile extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
 
-
+        final ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
 
         Bundle bundle = getArguments();
 //        boolean isLocation = bundle.getBoolean("isLocation",false);
         ListView listViewAds = (ListView) view.findViewById(R.id.list_view_profile);
         final List<Ads> ads = new ArrayList<>();
+
+        progressBar.setVisibility(View.VISIBLE);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("AdsTable");
         Query adsQuery = databaseReference;
@@ -61,6 +64,7 @@ public class FragmentProfile extends Fragment {
                     Ads ad = new Ads(ads1.getId(), ads1.getUser(), ads1.getImage(), ads1.getCaption(), ads1.getPrice(), ads1.getDescription(), ads1.getLocation(), ads1.getCategory(), ads1.getQuantity(), ads1.getDate(), ads1.getVerifiedBy(), ads1.getPhone());
                     ads.add(ad);
                 }
+                progressBar.setVisibility(View.GONE);
             }
 
 

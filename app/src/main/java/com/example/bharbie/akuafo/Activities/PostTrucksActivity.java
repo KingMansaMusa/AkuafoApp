@@ -1,6 +1,7 @@
 package com.example.bharbie.akuafo.Activities;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -98,7 +99,7 @@ public class PostTrucksActivity extends AppCompatActivity {
                 String model = editTextModel.getText().toString();
                 String regNo = editTextRegNo.getText().toString();
                 String size = spinnerTruckSize.getSelectedItem().toString();
-                String phone = editTextPhone.getText().toString();
+                final String phone = editTextPhone.getText().toString();
 
                 Truck truck = new Truck(idTruck, userFire, fileUrl, model, size, regNo, date, phone);
 
@@ -107,7 +108,9 @@ public class PostTrucksActivity extends AppCompatActivity {
                 } else if (regNo.isEmpty()) {
                     Toast.makeText(PostTrucksActivity.this, "Please input yout vehicle registration number", Toast.LENGTH_LONG).show();
                 } else {
-
+                    final ProgressDialog progressDialog = new ProgressDialog(PostTrucksActivity.this);
+                    progressDialog.setMessage("Processing...");
+                    progressDialog.show();
                     DatabaseReference currentUser = mDatabase.child(idTruck);
                     currentUser.child("UserTable").setValue(truck, new DatabaseReference.CompletionListener() {
                         @Override
@@ -115,6 +118,7 @@ public class PostTrucksActivity extends AppCompatActivity {
                             if (databaseError != null) {
                                 Log.e("ERROR", databaseError.toString());
                             }
+                            progressDialog.hide();
                         }
                     });
 

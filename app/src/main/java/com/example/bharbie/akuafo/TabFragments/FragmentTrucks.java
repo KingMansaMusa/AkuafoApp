@@ -8,11 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.bharbie.akuafo.Activities.AdsListItemShowActivity;
 import com.example.bharbie.akuafo.Activities.PostTrucksActivity;
+import com.example.bharbie.akuafo.Activities.TruckListItemShowActivity;
 import com.example.bharbie.akuafo.Adapters.AdsListAdapter;
 import com.example.bharbie.akuafo.Adapters.TrucksListAdapter;
 import com.example.bharbie.akuafo.Ads;
@@ -47,6 +51,7 @@ public class FragmentTrucks extends Fragment {
        // Bundle bundle = getArguments();
         //String name = bundle.getString("");
 
+        final ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("TruckTable");
 
@@ -61,12 +66,11 @@ public class FragmentTrucks extends Fragment {
                 if (user == null){
 
                     Toast.makeText(getActivity(),"Please Login before you can post an add",Toast.LENGTH_LONG).show();
+                } else if (user.getType() != "Truck Driver"){
+                Toast.makeText(getActivity(), "Please Login as a Truck Driver and try again ", Toast.LENGTH_LONG).show();
+                }else {Intent intent = new Intent(getActivity(), PostTrucksActivity.class);
+                    startActivity(intent);}
 
-
-                }
-
-                Intent intent = new Intent(getActivity(), PostTrucksActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -74,7 +78,7 @@ public class FragmentTrucks extends Fragment {
         ListView listViewTrucks = (ListView) view.findViewById(R.id.list_view_trucks);
         final List<Truck> trucks= new ArrayList<>();
 
-
+progressBar.setVisibility(View.VISIBLE);
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("ExtensionTable");
         Query adsQuery = databaseReference;
@@ -87,6 +91,7 @@ public class FragmentTrucks extends Fragment {
                     Truck truck1 = new Truck(truck.getId(),truck.getUserFire(),truck.getImage(),truck.getModel(),truck.getSize(),truck.getRegNo(),truck.getDate(),truck.getPhone());
                     trucks.add(truck1);
                 }
+                progressBar.setVisibility(View.GONE);
             }
 
 
@@ -99,6 +104,33 @@ public class FragmentTrucks extends Fragment {
 
         TrucksListAdapter trucksListAdapter = new TrucksListAdapter(getActivity(),R.layout.trucks_list_item, trucks);
         listViewTrucks.setAdapter(trucksListAdapter);
+
+
+        listViewTrucks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Truck truckItem = trucks.get(position);
+
+                String name = truckItem.getUserFire().getName();
+                String model = truckItem.getModel();
+                String size = truckItem.getSize();
+                String regNo = truckItem.getRegNo();
+                String date = truckItem.getDate();
+                String image = truckItem.getImage();
+                String phone = truckItem.getPhone();
+
+                Intent intent = new Intent(getActivity(),TruckListItemShowActivity.class);
+                intent.putExtra("model",model);
+                intent.putExtra("regNo",regNo);
+                intent.putExtra("date",date);
+                intent.putExtra("image",image);
+                intent.putExtra("name",name);
+                intent.putExtra("phone",phone);
+                intent.putExtra("date",date);
+                startActivity(intent);
+
+            }
+        });
 
         return  view;
     }

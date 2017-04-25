@@ -92,7 +92,7 @@ public class FragmentLocation extends Fragment {
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewVolta.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -111,7 +111,7 @@ public class FragmentLocation extends Fragment {
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewCentral.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -144,12 +144,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewWestern = (TextView) view.findViewById(R.id.western);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewWestern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewWestern.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -163,12 +163,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewBrong= (TextView) view.findViewById(R.id.brong);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewBrong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewBrong.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -182,12 +182,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewUpperEast = (TextView) view.findViewById(R.id.upper_east);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewUpperEast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewUpperEast.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -201,12 +201,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewUpperWest = (TextView) view.findViewById(R.id.upper_west);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewUpperWest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewUpperWest.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -220,12 +220,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewAshanti = (TextView) view.findViewById(R.id.ashanti);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewAshanti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewAshanti.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);
@@ -239,12 +239,12 @@ public class FragmentLocation extends Fragment {
         });
 
         final TextView textViewNorthern = (TextView) view.findViewById(R.id.north);
-        textViewAccra.setOnClickListener(new View.OnClickListener() {
+        textViewNorthern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                String text = textViewAccra.getText().toString();
+                String text = textViewNorthern.getText().toString();
 
                 Bundle bundle = new Bundle();
                 bundle.putString("location",text);

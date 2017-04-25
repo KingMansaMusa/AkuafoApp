@@ -1,6 +1,7 @@
 package com.example.bharbie.akuafo.Activities;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -61,6 +62,8 @@ public class PostAdsSecondActivity extends AppCompatActivity {
         //toolbar.setTitle("Ads and Info");
         //toolbar.setTitleTextColor(ContextCompat.getColor(PostAdsSecondActivity.this, R.color.back_color));
 
+
+
         String name = String.valueOf(Calendar.getInstance().getTimeInMillis());
         storageRef = FirebaseStorage.getInstance().getReference().child(name + ".jpeg");
         mDatabase = FirebaseDatabase.getInstance().getReference().child("AdsTable");
@@ -87,11 +90,7 @@ public class PostAdsSecondActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCategory.setAdapter(adapter);
 
-        final Spinner spinnerVerifiedBy = (Spinner) findViewById(R.id.spinner_verified_by);
-        ArrayAdapter<CharSequence> adapterVerifiedBy = ArrayAdapter.createFromResource(PostAdsSecondActivity.this,
-                R.array.spinner_verified_by, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerVerifiedBy.setAdapter(adapter);
+        final EditText editTextVerifiedBy = (EditText) findViewById(R.id.post_ads_verified_by);
 
 
         final EditText editTextQuantity = (EditText) findViewById(R.id.post_ads_quantity);
@@ -137,7 +136,7 @@ public class PostAdsSecondActivity extends AppCompatActivity {
                 String id = String.valueOf(Calendar.getInstance().getTimeInMillis());
                 String category = spinnerCategory.getSelectedItem().toString();
                 String location = spinnerLocation.getSelectedItem().toString();
-                String verifiedBy = spinnerVerifiedBy.getSelectedItem().toString();
+                String verifiedBy = editTextVerifiedBy.getText().toString();
                 String quantity = editTextQuantity.getText().toString();
                 String phone = editTextPhone.getText().toString();
 
@@ -150,7 +149,9 @@ public class PostAdsSecondActivity extends AppCompatActivity {
                     Toast.makeText(PostAdsSecondActivity.this, "Please input the phone number to buy", Toast.LENGTH_LONG).show();
                 } else {
 
-
+                    ProgressDialog progressDialog = new ProgressDialog(PostAdsSecondActivity.this);
+                    progressDialog.setMessage("Processing...");
+                    progressDialog.show();
                     DatabaseReference currentUser = mDatabase.child(id);
                     currentUser.child("UserTable").setValue(ads, new DatabaseReference.CompletionListener() {
                         @Override
@@ -159,7 +160,7 @@ public class PostAdsSecondActivity extends AppCompatActivity {
                                 Log.e("ERROR", databaseError.toString());
                             }
                         }
-                    });
+                    });progressDialog.hide();
 
                     Intent intent = new Intent(PostAdsSecondActivity.this, HomeActivity.class);
                     intent.putExtra("Check", 1);

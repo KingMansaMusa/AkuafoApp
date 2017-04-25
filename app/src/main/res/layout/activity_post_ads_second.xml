@@ -111,13 +111,13 @@
                 android:layout_height="wrap_content" />
 
 
-
-            <Spinner
-                android:id="@+id/spinner_verified_by"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:layout_margin="@dimen/edit_text_margin"
-                android:spinnerMode="dropdown"/>
+                android:hint="@string/post_ads_verified_by"
+                android:id="@+id/post_ads_verified_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
             <View
                 android:layout_width="match_parent"

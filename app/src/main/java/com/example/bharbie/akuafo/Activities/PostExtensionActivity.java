@@ -1,5 +1,6 @@
 package com.example.bharbie.akuafo.Activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -64,6 +65,10 @@ public class PostExtensionActivity extends AppCompatActivity {
                 }else if (info.isEmpty()){
                     Toast.makeText(PostExtensionActivity.this,"Please input your extension information",Toast.LENGTH_LONG).show();
                 }else{
+
+                    final ProgressDialog progressDialog = new ProgressDialog(PostExtensionActivity.this);
+                    progressDialog.setMessage("Processing...");
+                    progressDialog.show();
                     DatabaseReference currentUser =mDatabase.child(id);
                     currentUser.child("UserTable").setValue(extensionInfo, new DatabaseReference.CompletionListener() {
                         @Override
@@ -71,6 +76,7 @@ public class PostExtensionActivity extends AppCompatActivity {
                             if (databaseError != null){
                                 Log.e("ERROR",databaseError.toString());
                             }
+                            progressDialog.show();
                         }
                     });
 
